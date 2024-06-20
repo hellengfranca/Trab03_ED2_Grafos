@@ -1,0 +1,48 @@
+package Grafo;
+
+import java.util.ArrayList;
+
+public class Vertice<Integer>{
+    private Integer data;
+    private ArrayList<Aresta<Integer>> arestasEntrada; //todo vertice direcionado tem as arestas de entrada e saida
+    private ArrayList<Aresta<Integer>> arestasSaida;
+    private String cor;
+
+    public Vertice(Integer valor){
+        this.data = valor;
+        this.arestasEntrada = new ArrayList<Aresta<Integer>>();
+        this.arestasSaida = new ArrayList<Aresta<Integer>>();
+        this.cor = "branca";
+    }
+
+    public Integer getData() {
+        return data;
+    }
+
+    public void setData(Integer data) {
+        this.data = data;
+    }
+
+    public ArrayList<Aresta<Integer>> getArestasEntrada() {
+        return arestasEntrada;
+    }
+
+    public ArrayList<Aresta<Integer>> getArestasSaida() {
+        return arestasSaida;
+    }
+
+    public void addArestaEntrada(Aresta<Integer> aresta){
+        this.arestasEntrada.add(aresta);
+    }
+    public void addArestaSaida(Aresta<Integer> aresta){
+        this.arestasSaida.add(aresta);
+    }
+
+    public String getCor() {
+        return cor;
+    }
+
+    public void setCor(String cor) {
+        this.cor = cor;
+    }
+}
