@@ -7,6 +7,9 @@ public class Vertice<Integer>{
     private ArrayList<Aresta<Integer>> arestasEntrada; //todo vertice direcionado tem as arestas de entrada e saida
     private ArrayList<Aresta<Integer>> arestasSaida;
     private String cor;
+    private int d; // tempo de descoberta
+    private int f; // tempo de finalizacão
+    private Vertice<Integer> pi; // predecessor
 
     public Vertice(Integer valor){
         this.data = valor;
@@ -38,11 +41,39 @@ public class Vertice<Integer>{
         this.arestasSaida.add(aresta);
     }
 
+    public void Adj(Vertice<Integer> vertice){
+
+    }
+
     public String getCor() {
         return cor;
     }
 
     public void setCor(String cor) {
         this.cor = cor;
+    }
+
+    public int getD() {
+        return d;
+    }
+
+    public void setD(int d) {
+        this.d = d;
+    }
+
+    public int getF() {
+        return f;
+    }
+
+    public void setF(int f) {
+        this.f = f;
+    }
+
+    public Vertice<Integer> getPi() {
+        return pi;
+    }
+
+    public void setPi(Vertice<Integer> pi) {
+        this.pi = pi;
     }
 }

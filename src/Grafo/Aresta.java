@@ -4,7 +4,7 @@ public class Aresta<Integer> {
     private Double peso;
     private Vertice<Integer> inicio; // u
     private Vertice<Integer> fim; // v
-    private String tipo;
+    private String tipo = " ";
 
     public Aresta(Double peso, Vertice<Integer> inicio, Vertice<Integer> fim){
         this.peso = peso;
