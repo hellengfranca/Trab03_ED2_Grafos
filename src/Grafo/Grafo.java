@@ -27,15 +27,17 @@ public class Grafo<Integer> {
         this.arestas.add(aresta); // add a nov aaresta para o grafo
     }
 
+    public void adicionarAresta(Integer dadoInicio, Integer dadoFim) {
+        this.adicionarAresta(1.0, dadoInicio, dadoFim); // Definindo um peso padrão de 1.0
+    }
+
     public Vertice<Integer> getVertice(Integer dado) {
-        Vertice<Integer> vertice = null;
-        for(int i = 0; i< this.vertices.size(); i++){
-            if(this.vertices.get(i).getData().equals(dado)){
-                vertice = this.vertices.get(i);
-                break;
+        for(Vertice<Integer> v : this.vertices){
+            if(v.getData().equals(dado)){
+                return v;
             }
         }
-        return vertice;
+        return null;
     }
 
     public ArrayList<Vertice<Integer>> getVertices() {
