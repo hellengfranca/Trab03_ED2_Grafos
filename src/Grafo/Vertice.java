@@ -76,4 +76,8 @@ public class Vertice<Integer>{
     public void setPi(Vertice<Integer> pi) {
         this.pi = pi;
     }
+
+    public String toString(){
+        return data.toString();
+    }
 }
