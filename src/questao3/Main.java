@@ -17,16 +17,16 @@ public class Main {
         grafo.adicionarVertice(2);
         grafo.adicionarVertice(3);
         grafo.adicionarVertice(4);
-        grafo.adicionarAresta(10.0,0 ,1);
-        grafo.adicionarAresta(5.0,0 ,2);
-        grafo.adicionarAresta(1.0, 1, 3);
-        grafo.adicionarAresta(2.0, 1, 2);
-        grafo.adicionarAresta(3.0, 2, 1);
-        grafo.adicionarAresta(2.0, 2, 4);
-        grafo.adicionarAresta(9.0, 2, 3);
-        grafo.adicionarAresta(4.0, 3, 4);
-        grafo.adicionarAresta(7.0, 4, 0);
-        grafo.adicionarAresta(6.0, 4, 3);
+        grafo.adicionarAresta(10,0 ,1);
+        grafo.adicionarAresta(5,0 ,2);
+        grafo.adicionarAresta(1, 1, 3);
+        grafo.adicionarAresta(2, 1, 2);
+        grafo.adicionarAresta(3, 2, 1);
+        grafo.adicionarAresta(2, 2, 4);
+        grafo.adicionarAresta(9, 2, 3);
+        grafo.adicionarAresta(4, 3, 4);
+        grafo.adicionarAresta(7, 4, 0);
+        grafo.adicionarAresta(6, 4, 3);
 
         Vertice<Integer> verticeInicial = grafo.getVertice(0);
         Vertice<Integer> verticeDestino = grafo.getVertice(3);
