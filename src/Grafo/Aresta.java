@@ -1,22 +1,24 @@
 package Grafo;
 
+import Grafo.Vertice;
+
 public class Aresta<Integer> {
-    private Double peso;
+    private int peso;
     private Vertice<Integer> inicio; // u
     private Vertice<Integer> fim; // v
     private String tipo = " ";
 
-    public Aresta(Double peso, Vertice<Integer> inicio, Vertice<Integer> fim){
+    public Aresta(int peso, Vertice<Integer> inicio, Vertice<Integer> fim){
         this.peso = peso;
         this.inicio = inicio;
         this.fim = fim;
     }
 
-    public Double getPeso() {
+    public int getPeso() {
         return peso;
     }
 
-    public void setPeso(Double peso) {
+    public void setPeso(int peso) {
         this.peso = peso;
     }
 

@@ -18,7 +18,7 @@ public class Grafo<Integer> {
         this.vertices.add(novoVertice); // entrando no grafo
     }
 
-    public void adicionarAresta(Double peso, Integer dadoInicio, Integer dadoFim){ // recebe os dados dos vertices q sao ligados pela nova aresta
+    public void adicionarAresta(int peso, Integer dadoInicio, Integer dadoFim){ // recebe os dados dos vertices q sao ligados pela nova aresta
         Vertice<Integer> inicio = this.getVertice(dadoInicio); // procurando o vertice q tenha o dado procurado
         Vertice<Integer> fim = this.getVertice(dadoFim); // procurando o vertice q tenha o dado procurado
         Aresta<Integer> aresta = new Aresta<Integer>(peso, inicio, fim); // criando a nova aresta
@@ -28,16 +28,18 @@ public class Grafo<Integer> {
     }
 
     public void adicionarAresta(Integer dadoInicio, Integer dadoFim) {
-        this.adicionarAresta(1.0, dadoInicio, dadoFim); // Definindo um peso padrão de 1.0
+        this.adicionarAresta(1, dadoInicio, dadoFim); // Definindo um peso padrão de 1.0
     }
 
     public Vertice<Integer> getVertice(Integer dado) {
-        for(Vertice<Integer> v : this.vertices){
-            if(v.getData().equals(dado)){
-                return v;
+        Vertice<Integer> vertice = null;
+        for(int i = 0; i< this.vertices.size(); i++){
+            if(this.vertices.get(i).getData().equals(dado)){
+                vertice = this.vertices.get(i);
+                break;
             }
         }
-        return null;
+        return vertice;
     }
 
     public ArrayList<Vertice<Integer>> getVertices() {

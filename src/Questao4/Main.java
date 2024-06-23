@@ -45,19 +45,19 @@ public class Main {
 //            System.out.println(v);
 //        }
 
-        Integer qtdArestas = contaArestasEntre(grafo, verticeInicial, verticeDestino);
+//        Integer qtdArestas = contaArestasEntre(grafo, verticeInicial, verticeDestino);
 //        System.out.println(qtdArestas);
 
         List<Vertice<Integer>> verticesDistanciaD =  verticesDDistantes(grafo, verticeInicial, 2);
 
-//        for (Vertice<Integer> v : verticesDistanciaD) {
-//            System.out.println(v.toString());
-//        }
-
-        List<Vertice<Integer>> caminhoAB = retornaCaminho(grafo, verticeInicial, verticeDestino);
-        for (Vertice<Integer> v : caminhoAB) {
+        for (Vertice<Integer> v : verticesDistanciaD) {
             System.out.println(v.toString());
         }
+
+//        List<Vertice<Integer>> caminhoAB = retornaCaminho(grafo, verticeInicial, verticeDestino);
+//        for (Vertice<Integer> v : caminhoAB) {
+//            System.out.println(v.toString());
+//        }
 
 
     }
