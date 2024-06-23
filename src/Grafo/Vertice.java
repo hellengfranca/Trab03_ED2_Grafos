@@ -1,6 +1,8 @@
 package Grafo;
 
 import java.util.ArrayList;
+import java.util.HashSet;
+import java.util.Set;
 
 public class Vertice<Integer>{
     private Integer data;
@@ -10,12 +12,18 @@ public class Vertice<Integer>{
     private int d; // tempo de descoberta
     private int f; // tempo de finalizacão
     private Vertice<Integer> pi; // predecessor
+    private boolean visitado;
+    private Set<Vertice<Integer>> vizinhos = new HashSet<Vertice<Integer>>();
 
     public Vertice(Integer valor){
         this.data = valor;
         this.arestasEntrada = new ArrayList<Aresta<Integer>>();
         this.arestasSaida = new ArrayList<Aresta<Integer>>();
         this.cor = "branca";
+    }
+
+    public void addVizinho(Vertice<Integer> vertice){
+        vizinhos.add(vertice);
     }
 
     public Integer getData() {
