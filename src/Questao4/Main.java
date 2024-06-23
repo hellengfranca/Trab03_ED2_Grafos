@@ -36,8 +36,8 @@ public class Main {
         grafo.adicionarAresta(5 ,0);
         grafo.adicionarAresta(0 ,5);
 
-        Vertice<Integer> verticeInicial = grafo.getVertice(3);
-        Vertice<Integer> verticeDestino = grafo.getVertice(4);
+        Vertice<Integer> verticeInicial = grafo.getVertice(0);
+        Vertice<Integer> verticeDestino = grafo.getVertice(3);
 
         List<Vertice<Integer>> caminho =  buscaLargura(grafo, verticeInicial);
 

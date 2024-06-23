@@ -110,14 +110,10 @@ public class BFS {
                 visitados.add(verticeAtual);
 
                 if(verticeAtual.equals(verticeFinal)){
-                    Stack<Vertice<Integer>> pilha = new Stack<>();
-                    pilha.add(verticeAtual);
+                    caminho.addFirst(verticeAtual);
                     while(predecessor.get(verticeAtual) != null){
-                        pilha.push(predecessor.get(verticeAtual));
+                        caminho.addFirst(predecessor.get(verticeAtual));
                         verticeAtual = predecessor.get(verticeAtual);
-                    }
-                    while(!pilha.isEmpty()){
-                        caminho.add(pilha.pop());
                     }
                     return caminho;
                 }
